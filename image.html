@@ -1,0 +1,611 @@
+<!DOCTYPE html>
+
+<head>
+    <title>MEDSLAVE WEBSITE</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="complete.js"></script>
+</head>
+
+<BODY>
+    <div class="main">
+        <div class="nav" id="nav">
+            <div class="LOGO">
+                <img src="vanshika medslave.jpg" alt="MEDSLAVE LOGO">
+            </div>
+            <div class="search-box border">
+                <div class="row">
+                    <input type="text" id="input-box" onkeyup="myfunction()" name="search"
+                        placeholder="Search your medicine">
+                    <button><i class="fa fa-search" aria-hidden="true"></i></button>
+                </div>
+                <div class="result-box">
+                    <ul id="myul">
+                        <li><a href="#">Homeopathy</a></li>
+                        <li><a href="#">Babycare</a></li>
+                        <li><a href="#">Vitamins</a></li>
+                        <li><a href="#">Pregnancy</a></li>
+                        <li><a href="#">Hygine</a></li>
+                        <li><a href="#">Pain</a></li>
+                        <li><a href="#">Irritation</a></li>
+                        <li><a href="#">Weight manage</a></li>
+                        <li><a href="#">Maternity care</a></li>
+                    </ul>
+                </div>
+            </div>
+            <script>
+                function myfunction() {
+                    var input = document.getElementById('input-box');
+                    var filter = input.value.toUppercase();
+                    var ul = document.getElementById('myul');
+                    var li = ul.getElementsByTagName('li');
+                    for (var i = 0; i < li.length; i++) {
+                        var a = li[i].getElementsByTagName("a")[0];
+                        var txtvalue = a.textContent || a.innerText;
+                        if (txtvalue.toUpperCase().indexOf(filter) > -1) {
+                            li[i].style.display = "";
+                        }
+
+                        else {
+                            li[i].style.display = "none";
+                        }
+                    }
+                }
+                /*let search=document.getElementById('input-box').value;
+                search=search.toUpperCase();
+                let availablekeywords=['HOMEOPATHY','BABYCARE','VITAMINS','PREGNANCY'];
+                for(let i=0;i<5;i++){
+                    if(availablekeywords[i]==search){
+                        windows.location.href='homeopathy.html';
+                    }
+                }*/
+
+            </script>
+            <div class="nav-address  border" onclick="window.location.href='map.html'">
+                <p class="deliver">DELIVER TO</p>
+                <div class="add-icon">
+                    <i class="fa-solid fa-location-dot"></i>
+                </div>
+                <p class="india">INDIA</p>
+            </div>
+            <div class="sign-in border">
+                <button id="bht"><i class="fa-solid fa-user-plus fa-xl"></i></i></button></i></i></i></button>
+            </div>
+            <br />
+            <br />
+        </div>
+        <div class="page-part">
+            <div class="buy-medicine ways" onclick="window.location.href='#shop'">
+                <img src="https://medlineplus.gov/images/Medicines_share.jpg" alt="medicine">
+                <p>BUY MEDICINE</p>
+            </div>
+            <div class="consult-doctor ways">
+                <img src="https://theapprenticedoctor.com/wp-content/uploads/2022/08/Depositphotos_103747962_XL-scaled.jpg"
+                    alt="doctor">
+                <p>CONSULT DOCTOR</p>
+            </div>
+            <div class="wellness ways">
+                <img src="https://globalwellnessinstitute.org/wp-content/uploads/2019/05/wellnessinfographic.png"
+                    alt="">
+                <p>WELLNESS</p>
+            </div>
+        </div>
+        <div class="stores" onclick="window.location.href='map.html'">
+            <img src="https://cdn.vectorstock.com/i/preview-1x/31/91/symbol-of-healthcare-pharmacy-drug-store-vector-18323191.jpg"
+                alt="medical">
+            <p>STORES NEAR BY</p>
+            <img src="https://cdn-icons-png.flaticon.com/512/54/54531.png" alt="arrow" id="storesarrow">
+
+        </div>
+        <div class="gallery-wrap">
+            <img src="https://static.vecteezy.com/system/resources/previews/017/785/090/non_2x/left-arrow-icon-on-transparent-background-free-png.png"
+                id="front-btn">
+            <div class="gallery">
+                <div>
+                    <div><span><img onerror="this.src='/assets/icons/img_placeholder.svg'" class="banner_img"
+                                src="https://www.netmeds.com/images/cms/aw_rbslider/slides/1698768248_Web_Home_Banner.jpg"
+                                title="FREE shipping offer" alt="MEDSLAVE FREE shipping offer" height="200"
+                                max-width="580"></span>
+                    </div>
+                    <div><span><img src="https://www.netmeds.com/images/cms/offers/1690977126_Mobile_Homefafaf.jpg"
+                                class="offer_sub_img" alt="Flat 20% off on medicines online" height="200"
+                                max-width="580"></span></div>
+                    <div><span><img alt="scrollable_banner"
+                                srcset="https://assets.truemeds.in/Images/dwebbanner2.jpeg?tr=cm-pad_resize,bg-FFFFFF,lo-true,w-724 1x, https://assets.truemeds.in/Images/dwebbanner2.jpeg?tr=cm-pad_resize,bg-FFFFFF,lo-true,w-724 2x"
+                                src="https://assets.truemeds.in/Images/dwebbanner2.jpeg?tr=cm-pad_resize,bg-FFFFFF,lo-true,w-724"
+                                max-width="580" height="200" decoding="async" data-nimg="future"
+                                style="color: transparent;"></span></div>
+                </div>
+            </div>
+            <img src="https://static.vecteezy.com/system/resources/previews/011/646/402/original/right-arrow-symbol-for-icon-design-png.png"
+                id="back-btn">
+        </div>
+        <h2 ID="shop">SHOP BY CATEGORY</h2>
+        <div class="boxO">
+            <div class="box1 boxx" onclick="window.location.href='homeopathy.html'">
+                <p>HOMEOPATHY</p>
+                <img src="https://www.netmeds.com/images/product-v1/600x600/826156/dr_reckeweg_bc_21_tablet_20_gm_0.jpg"
+                    alt="BC 21">
+            </div>
+            <div class="box2 boxx" onclick="window.location.href='vitamin.html'">
+                <p>VITAMINS AND SUPPLEMENTS</p>
+                <img src="https://blog-images-1.pharmeasy.in/blog/production/wp-content/uploads/2021/01/07135116/vitamin-capsules-benefits.jpg"
+                    alt="VITAMINS">
+            </div>
+            <div class="box3 boxx" onclick="window.location.href='Babycare.html'">
+                <p>BABY CARE</p>
+                <img src="https://www.delhionlineflorists.com/images/CSCSUUN451_big.webp"
+                    alt="BABY CARE HIMALAYA PRODUCTS">
+            </div>
+            <div class="box4 boxx">
+                <p>FEMININE HYGINE</p>
+                <img src="https://m.media-amazon.com/images/I/61YVB0bi4LL.jpg" alt="VEET FEMININE PRODUCTS">
+            </div>
+        </div>
+        <div class="boxJ">
+            <div class="box5 boxx" onclick="window.location.href='haircare.html'">
+                <p>HAIRCARE</p>
+                <img src="https://hips.hearstapps.com/hmg-prod/images/gh-012021-best-hair-products-1642523366.png?crop=0.502xw:1.00xh;0.250xw,0&resize=640:*"
+                    alt="haircare">
+            </div>
+            <div class="box6 boxx" onclick="window.location.href='weight.html'">
+                <p>WEIGHT MANAGEMENT</p>
+                <img src="https://cdn01.pharmeasy.in/dam/products_otc/241080/endura-mass-chocolate-flavour-500g-2-1671741498.jpg"
+                    alt="ENDURA MASS WEIGHT MANAGEMENT PRODUCTS">
+            </div>
+            <div class="box7 boxx">
+                <p>FAMILY NUTRITION</p>
+                <img src="https://images-eu.ssl-images-amazon.com/images/G/31/img23/HPC/FamilyNut/FamNut_4.png"
+                    alt="FAMILY PROTEIN GAIN PRODUCTS">
+            </div>
+            <div class="box8 boxx">
+                <p>MATERNITY CARE</p>
+                <img src="https://cdn.ae1stcry.com/brainbees/images/m/palmer/maternity_V1.jpg"
+                    alt="MATERNITY CARE PRODUCTS">
+            </div><br />
+        </div>
+        <h2>LAB TESTS BY HEALTH CONCERN</h2>
+        <div class="test">
+            <div class="thyroid tests">
+                <img src="https://assets-global.website-files.com/5e0143c66e14efc18c6f469d/644fe5bf8f79f6a0c8925975_sing%20(8).jpg"
+                    alt="thyroid ">
+                <p>THYROID CONCERN</p>
+            </div>
+            <div class="pregnancy tests">
+                <img src="https://i.pinimg.com/736x/b7/59/ba/b759baeb415112041264ca0d26b2e816.jpg" alt="pregnancy">
+                <p>PREGNANCY CONCERN</p>
+            </div>
+            <div class="diabetes tests">
+                <img src="https://cdn-icons-png.freepik.com/512/5935/5935571.png" alt="diabetes">
+                <p>DIABETES CONCERN</p>
+            </div>
+        </div>
+        <br />
+        <div class="ratings">
+            <h2>APP RATINGS</h2>
+            <progress id="rating" value="80" max="100">5<i class="fa fa-star" aria-hidden="true"></i></progress>
+            <span>5<i class="fa fa-star" aria-hidden="true"></i></span> <br>
+            <progress id="rating" value="30" max="100">4<i class="fa fa-star" aria-hidden="true"></i></progress>
+            <span>4<i class="fa fa-star" aria-hidden="true"></i></span><br>
+            <progress id="rating" value="15" max="100">3<i class="fa fa-star" aria-hidden="true"></i></progress>
+            <span>3<i class="fa fa-star" aria-hidden="true"></i></span> <br>
+            <progress id="rating" value="3" max="100">2<i class="fa fa-star" aria-hidden="true"></i></progress>
+            <span>2<i class="fa fa-star" aria-hidden="true"></i></span> <br>
+            <progress id="rating" value="2" max="100">1<i class="fa fa-star" aria-hidden="true"></i></progress>
+            <span>1<i class="fa fa-star" aria-hidden="true"></i></span> <br>
+        </div>
+        <footer class="footer">
+            <p class="back" onclick="window.location.href='#nav'"><i class="fa fa-home" aria-hidden="true"></i><br>HOME
+            </p>
+            <p class="Account" onclick="window.location.href='signup.html'"><i class="fa fa-user"
+                    aria-hidden="true"></i><br>ACCOUNT
+            </p>
+        </footer>
+    </div>
+    <script>
+        let scrollcontainer = document.querySelector(".gallery");
+        let backbtn = document.getElementById("#back-btn");
+        let frontbtn = document.getElementById("#front-btn");
+        scrollcontainer.addEventListener('wheel', (evt) => {
+            evt.preventDefault();
+            scrollcontainer.scrollleft += evt.deltaY;
+        });
+
+    </script>
+</BODY>
+<style>
+    * {
+        margin: 0%;
+        padding: 0%;
+        box-sizing: border-box;
+        font-family: 'Times New Roman', Times, serif;
+
+    }
+
+    .main {
+        background-image: url('https://png.pngtree.com/thumb_back/fh260/background/20190223/ourmid/pngtree-blue-genetic-dna-medical-background-windbackground-display-boardbackgroundpsdcolorful-image_77077.jpg');
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+
+    .nav {
+        height: 120px;
+        width: 100%;
+        display: flex;
+        background-color: rgb(53, 191, 236);
+    }
+
+    .nav img {
+        width: 120px;
+        height: 120px;
+    }
+
+    .search-box {
+        width: 50%;
+        background: #fff;
+        margin: 50px auto 0;
+        border: 5px;
+        border-radius: 5px;
+        align-items: center;
+    }
+
+    #myInput {
+        background-image: url('/css/searchicon.png');
+        /* Add a search icon to input */
+        background-position: 10px 12px;
+        /* Position the search icon */
+        background-repeat: no-repeat;
+        /* Do not repeat the icon image */
+        width: 100%;
+        /* Full-width */
+        font-size: 16px;
+        /* Increase font-size */
+        padding: 12px 20px 12px 40px;
+        /* Add some padding */
+        border: 1px solid #ddd;
+        /* Add a grey border */
+        margin-bottom: 12px;
+        /* Add some space below the input */
+    }
+
+    #myUL {
+        /* Remove default list styling */
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    #myUL li a {
+        border: 1px solid #ddd;
+        /* Add a border to all links */
+        margin-top: -1px;
+        /* Prevent double borders */
+        background-color: #f6f6f6;
+        /* Grey background color */
+        padding: 12px;
+        /* Add some padding */
+        text-decoration: none;
+        /* Remove default text underline */
+        font-size: 18px;
+        /* Increase the font-size */
+        color: black;
+        /* Add a black text color */
+        display: block;
+        /* Make it into a block element to fill the whole list */
+    }
+
+    #myUL li a:hover:not(.header) {
+        background-color: #eee;
+        /* Add a hover effect to all links, except for headers */
+    }
+
+    .row {
+        display: flex;
+        align-items: center;
+        padding: 10px 20px;
+    }
+
+    input {
+        flex: 1;
+        height: 40px;
+        background: transparent;
+        border: 0;
+        outline: 0;
+        font-size: 18px;
+        color: #333;
+    }
+
+    button {
+        background: transparent;
+        border: 0;
+        outline: 0;
+    }
+
+    button .fa fa-search {
+        width: 25px;
+        color: #555;
+        font-size: 22px;
+        cursor: pointer;
+    }
+
+    ::placeholder {
+        color: #555;
+    }
+
+    #rating {
+        color: aqua;
+    }
+
+    .result-box ul {
+        background-color: #fff;
+        border-top: 1px solid #999;
+        padding: 15px 10px;
+        overflow: auto;
+    }
+
+    .resultbox ul li {
+        list-style: none;
+        border-radius: 3px;
+        padding: 15px 10px;
+        cursor: pointer;
+    }
+
+    .resultbox ul li:hover {
+        background: rgba(183, 220, 235, 0.467);
+
+    }
+
+    .result-box {
+        max-height: 80px;
+        overflow-y: scroll;
+
+    }
+
+    button .fa fa-sign-in {
+        height: 100px;
+        width: 80px;
+        align-items: center;
+    }
+
+    .border {
+        border: 2px solid transparent;
+        text-align: center;
+    }
+
+    .border:hover {
+        border: 2px solid #cccccc;
+    }
+
+    .nav-address {
+        align-items: center;
+        justify-content: center;
+        margin-right: 10px;
+    }
+
+    .add-icon {
+        display: flex;
+        align-items: center;
+    }
+
+    .deliver {
+        color: rgb(32, 32, 172);
+        font-size: 0.85rem;
+        margin-left: 15px;
+        align-items: center;
+    }
+
+    h2 {
+        margin: 0;
+        padding: 0;
+        text-align: center;
+
+    }
+
+    .india {
+        font-size: 1rem;
+        margin-left: 15px;
+    }
+
+    .sign-in {
+        height: 100px;
+        width: 100px;
+        align-items: center;
+    }
+
+    .stores {
+        background-color: #fff;
+        display: flex;
+        border: 2px solid #cccccc;
+        color: #333;
+        height: 50px;
+        width: 90%;
+        border-radius: 8px;
+    }
+
+    #storesarrow {
+        margin-left: 60%;
+        width: 20px;
+        height: 30px;
+    }
+
+    .stores p {
+        font-size: x-large;
+        color: rgb(216, 22, 22);
+    }
+
+    .stores img {
+        height: 80%;
+        width: 10%;
+    }
+
+    .gallery {
+        display: flex;
+        overflow-x: scroll;
+        width: 100%;
+
+    }
+
+    .gallery div {
+        width: 100%;
+        display: grid;
+        grid-template-columns: auto auto auto;
+        grid-gap: 20px;
+        padding: 10px;
+        flex: none;
+    }
+
+    .gallery div img {
+        width: 100%;
+        transition: transform 0.5s;
+    }
+
+    .gallery::-webkit-scrollbar {
+        display: none;
+
+    }
+
+    .gallery-wrap {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 10% auto;
+    }
+
+    #front-btn,
+    #back-btn {
+        width: 50px;
+        cursor: pointer;
+        margin: 40px;
+    }
+
+    .gallery div img:hover {
+        cursor: pointer;
+
+    }
+
+    .boxO,
+    .boxJ {
+        display: flex;
+        justify-content: space-evenly;
+    }
+
+    .boxx {
+        background-color: #fff;
+        height: 220px;
+        width: 200px;
+        border: 4px solid #555;
+        margin-bottom: 10px;
+        margin-left: 50px;
+        margin-right: 50px;
+
+    }
+
+    .boxx p {
+        font-size: 20px;
+        margin-bottom: 2px;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+    }
+
+    .boxx img {
+        height: 75%;
+        width: 98%;
+
+    }
+
+    .boxx img:hover {
+        border: 2px solid rgb(89, 243, 235);
+    }
+
+    .page-part {
+        margin-top: 80px;
+        margin-bottom: 10px;
+        display: flex;
+        justify-content: space-evenly;
+
+    }
+
+    .ways {
+        position: relative;
+        background-color: #fff;
+        height: 200px;
+        width: 180px;
+        border: 5px solid #555;
+        text-align: center;
+    }
+
+    .ways img {
+        height: 100%;
+        width: 100%;
+    }
+
+    .ways:hover {
+        border: 5px solid rgb(41, 233, 240);
+    }
+
+    .ways p {
+        background-blend-mode: luminosity;
+        text-decoration: double;
+        position: absolute;
+        bottom: 2px;
+        ;
+        right: 26px;
+    }
+
+    .test {
+        display: flex;
+        justify-content: space-evenly;
+    }
+
+    .tests {
+        height: 200px;
+        width: 160px;
+        border: 2px solid #fff;
+        background-color: rgb(255, 192, 203);
+
+    }
+
+    .tests img {
+        height: 160px;
+        width: 150px;
+        border-radius: 50%;
+
+    }
+
+    .footer {
+        background-color: #333;
+        color: #fff;
+        box-sizing: border-box;
+        height: 50px;
+        width: 100%;
+        display: flex;
+        border: 2px solid transparent;
+    }
+
+    .back {
+        border: 2px solid transparent;
+        margin-left: 20%;
+    }
+
+    .back:hover {
+        border: 2px solid rgba(54, 221, 243, 0.623);
+    }
+
+    .Account {
+        border: 2px solid transparent;
+        margin-left: 40%;
+    }
+
+    .Account:hover {
+        border: 2px solid rgba(53, 220, 241, 0.623);
+    }
+
+    .boxJ {
+        margin-bottom: 80px;
+    }
+
+    .ratings {
+        text-align: center;
+        justify-content: center;
+    }
+</style>
